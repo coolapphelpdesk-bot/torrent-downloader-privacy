@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Nexus Torrent</title>
+<meta name="description" content="Privacy policy for the Nexus Torrent Android application by Cool App Helpdesk.">
+<style>
+  :root {
+    --bg: #f3f5f9; --surface: #ffffff; --text: #0f1729; --muted: #5b6577;
+    --primary: #2747d9; --primary-soft: #dde3fb; --border: #e3e7ef;
+    --positive: #3f6b4a; --positive-bg: #dfeadb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0b0d10; --surface: #14171c; --text: #e8ebf0; --muted: #9aa2af;
+      --primary: #c8f135; --primary-soft: #2b3410; --border: #262b33;
+      --positive: #8fc29b; --positive-bg: #22362a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 96px; }
+  header { border-radius: 16px; padding: 32px 28px; margin-bottom: 24px;
+    background: linear-gradient(135deg, #2747d9 0%, #1b2f94 55%, #0b0d10 100%); color: #fff; }
+  header h1 { margin: 0 0 6px; font-size: 28px; font-weight: 700; letter-spacing: -0.01em; }
+  header p { margin: 0; opacity: 0.92; font-size: 15px; }
+  .card { background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 22px 26px; margin: 14px 0; }
+  h2 { font-size: 19px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.005em; }
+  p, ul, ol { margin: 0 0 12px; }
+  ul, ol { padding-left: 22px; } li { margin-bottom: 6px; }
+  .muted { color: var(--muted); font-size: 14px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { font-weight: 600; color: var(--muted); background: var(--primary-soft); }
+  tr:last-child td { border-bottom: none; }
+  code { background: var(--primary-soft); padding: 1px 6px; border-radius: 4px;
+    font-size: 13px; font-family: "SFMono-Regular", Consolas, Menlo, monospace; }
+  a { color: var(--primary); text-decoration: none; } a:hover { text-decoration: underline; }
+  .badge { display: inline-block; background: var(--positive-bg); color: var(--positive);
+    font-size: 12px; font-weight: 600; padding: 2px 8px; border-radius: 20px; }
+  footer { margin-top: 32px; text-align: center; color: var(--muted); font-size: 13px; }
+  @media (max-width: 480px) {
+    .wrap { padding: 24px 16px 64px; }
+    header { padding: 24px 20px; } header h1 { font-size: 24px; }
+    .card { padding: 18px 20px; } h2 { font-size: 17px; }
+    table { font-size: 13px; } th, td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<header>
+  <h1>Privacy Policy</h1>
+  <p>Nexus Torrent &middot; last updated <time datetime="2026-10-27">October 27, 2026</time></p>
+</header>
+
+<section class="card">
+  <h2>1. Summary</h2>
+  <p>Nexus Torrent (&ldquo;the app&rdquo;) is a BitTorrent client for Android published by <strong>Cool App Helpdesk</strong>. You add a magnet link or a <code>.torrent</code> file, and the app downloads it from other BitTorrent users and, if you allow it, shares it back.</p>
+  <ul>
+    <li>There is no account or sign-in, and <strong>we (the developer) never receive any data about you, your torrents or your downloads</strong>. We have no server.</li>
+    <li>Your torrent list, settings and downloaded files stay on your device.</li>
+    <li>BitTorrent is peer-to-peer: while a torrent is active, <strong>your IP address is visible to the other peers and to the trackers of that torrent</strong>, as it is with every BitTorrent client. See section 5.</li>
+    <li>The app contains no analytics, crash-reporting or attribution SDK.</li>
+  </ul>
+</section>
+
+<section class="card">
+  <h2>2. Data we collect</h2>
+  <p><strong>The developer collects nothing.</strong> The app sends no personal data, usage data, analytics or crash reports to the developer or to any service operated by the developer.</p>
+  <p>Crash and stability statistics that Android shares with Google Play under your device&rsquo;s own settings (&ldquo;Android vitals&rdquo;) are aggregated and anonymous; they contain nothing about what you download.</p>
+</section>
+
+<section class="card">
+  <h2>3. Data stored on your device</h2>
+  <p>Everything the app keeps is stored on your device and is deleted when you uninstall the app or clear its data.</p>
+  <table>
+    <thead><tr><th>Item</th><th>Where</th><th>Sent off device?</th></tr></thead>
+    <tbody>
+      <tr><td>Your torrent list: name, info hash, magnet link, save folder, files you chose, paused or running</td><td>App private storage (local database)</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>Copies of <code>.torrent</code> files and resume data, so downloads continue where they stopped</td><td>App private storage</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>BitTorrent network state (DHT routing table), so peers are found faster after a restart</td><td>App private storage</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>Preferences: theme, language, Wi-Fi only, keep sharing when done, speed limits</td><td>App private storage</td><td>Only through Android backup, if you have it turned on</td></tr>
+      <tr><td>Downloaded files</td><td>The app&rsquo;s download folder on your device (<code>Android/data/coolapp.torrent.downloader/files/Download</code>)</td><td>Shared with other peers of that torrent while it is seeding (see section 5)</td></tr>
+    </tbody>
+  </table>
+  <p>Android cloud backup, when enabled on your device, can include the preferences above. Your torrent list, resume data and downloaded files are excluded from backup.</p>
+</section>
+
+<section class="card">
+  <h2>4. Permissions used</h2>
+  <table>
+    <thead><tr><th>Permission</th><th>Reason</th><th>When asked</th></tr></thead>
+    <tbody>
+      <tr><td><code>INTERNET</code></td><td>Connect to BitTorrent peers, trackers and the DHT network, and download a <code>.torrent</code> file from a link you enter.</td><td>Auto-granted (normal permission)</td></tr>
+      <tr><td><code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code></td><td>Know whether you are on Wi-Fi or a metered network, for the &ldquo;Wi-Fi only&rdquo; setting.</td><td>Auto-granted (normal permissions)</td></tr>
+      <tr><td><code>CHANGE_WIFI_MULTICAST_STATE</code></td><td>Find peers on your local network and ask your router to open a port (UPnP / NAT-PMP) so other peers can reach you.</td><td>Auto-granted (normal permission)</td></tr>
+      <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Keep transfers you started running while the app is in the background, with a notification showing their progress.</td><td>Auto-granted (normal permissions)</td></tr>
+      <tr><td><code>POST_NOTIFICATIONS</code></td><td>Show transfer progress and tell you when a download has finished.</td><td>On first launch (Android 13+). Optional.</td></tr>
+    </tbody>
+  </table>
+  <p>The app requests no access to your contacts, location, camera, microphone, photos or other files. A <code>.torrent</code> file you open is read through Android&rsquo;s file picker or the app you opened it from, which grants access to that file only.</p>
+</section>
+
+<section class="card">
+  <h2>5. Network activity and third parties</h2>
+  <p>BitTorrent works by connecting directly to other people&rsquo;s devices. While a torrent is downloading or seeding, the app:</p>
+  <ul>
+    <li>contacts the <strong>trackers</strong> listed in that torrent and the <strong>DHT</strong> network to find peers. They receive your IP address, a port number, the torrent&rsquo;s info hash and how much you have transferred;</li>
+    <li>connects to <strong>peers</strong>, who see your IP address, the app&rsquo;s name and version (&ldquo;NexusTorrent&rdquo;) and which pieces of the torrent you have;</li>
+    <li>uploads pieces of that torrent to other peers, unless you turn off <em>Keep sharing when done</em> in Settings or pause the torrent.</li>
+  </ul>
+  <p>Trackers and peers are operated by third parties the developer has no relationship with. Anyone in a torrent&rsquo;s swarm can see the IP addresses taking part in it. If you want to hide your IP address, use a VPN of your choice.</p>
+  <p>When you paste a link to a <code>.torrent</code> file, the app downloads that file from the website you entered. The app also asks your router on the local network to open a port (UPnP / NAT-PMP).</p>
+  <p>The app contains no analytics, crash-reporting, attribution, social or cloud-storage SDK. When you share a magnet link or open a downloaded file, the app hands it to the app you choose; the developer does not see it.</p>
+  <p>You are responsible for what you download and share. Only download content you have the right to share, such as Linux distributions or Creative Commons media.</p>
+</section>
+
+<section class="card">
+  <h2>6. Children&rsquo;s privacy</h2>
+  <p>The app is intended for general audiences and is not directed at children under 13. We do not knowingly collect personal information from children, and the developer collects no personal information from anyone.</p>
+</section>
+
+<section class="card">
+  <h2>7. Data retention and deletion</h2>
+  <p>The developer stores no data off your device. Removing a torrent in the app removes it from your list and its resume data; tick <em>Also delete downloaded files</em> to remove its files too. To remove everything, clear the app&rsquo;s storage in <em>Android Settings &rarr; Apps &rarr; Nexus Torrent &rarr; Storage &rarr; Clear storage</em>, or uninstall the app. Trackers and peers keep their own records under their own policies; the developer cannot reach or delete them.</p>
+</section>
+
+<section class="card">
+  <h2>8. Security</h2>
+  <p>App data is held in the app&rsquo;s private storage, protected by Android&rsquo;s built-in application sandboxing. Peer connections use BitTorrent protocol encryption when the other peer supports it. The app is distributed through the Google Play Store, which verifies the developer signing key on every update.</p>
+</section>
+
+<section class="card">
+  <h2>9. Changes to this policy</h2>
+  <p>If any material aspect of how the app handles data ever changes, this page will be updated and the &ldquo;last updated&rdquo; date above will be bumped. Continued use after a change constitutes acceptance.</p>
+</section>
+
+<section class="card">
+  <h2>10. Contact</h2>
+  <p>Questions, requests about your data, or complaints (including as grievance contact under India&rsquo;s Digital Personal Data Protection Act)? Email <a href="mailto:coolapphelpdesk@gmail.com">coolapphelpdesk@gmail.com</a>.</p>
+</section>
+
+<footer>&copy; 2026 Cool App Helpdesk &middot; Nexus Torrent</footer>
+
+</main>
+</body>
+</html>
