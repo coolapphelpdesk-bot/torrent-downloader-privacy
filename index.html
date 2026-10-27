@@ -66,13 +66,25 @@
     <li>There is no account or sign-in, and <strong>we (the developer) never receive any data about you, your torrents or your downloads</strong>. We have no server.</li>
     <li>Your torrent list, settings and downloaded files stay on your device.</li>
     <li>BitTorrent is peer-to-peer: while a torrent is active, <strong>your IP address is visible to the other peers and to the trackers of that torrent</strong>, as it is with every BitTorrent client. See section 5.</li>
+    <li>The app includes <strong>Google AdMob</strong> to show a banner ad. Ads are switched off until 1 January 2027; until then the ads SDK is not started and receives nothing. See section 2.</li>
     <li>The app contains no analytics, crash-reporting or attribution SDK.</li>
   </ul>
 </section>
 
 <section class="card">
   <h2>2. Data we collect</h2>
-  <p><strong>The developer collects nothing.</strong> The app sends no personal data, usage data, analytics or crash reports to the developer or to any service operated by the developer.</p>
+  <p><strong>The developer collects nothing.</strong> The app sends no personal data, usage data, analytics or crash reports to the developer or to any service operated by the developer. The only third-party SDK that can collect data is Google AdMob, described below.</p>
+  <p><strong>Advertising (Google AdMob)</strong></p>
+  <p>The app shows one banner ad on its Torrents screen, served by the <strong>Google Mobile Ads SDK (AdMob)</strong>. Ads are switched off until <strong>1 January 2027</strong>: before that date the SDK is never started, requests no ads and collects nothing. From that date, AdMob may collect the following to show and measure ads:</p>
+  <table>
+    <thead><tr><th>Data</th><th>Purpose</th><th>Collected by</th></tr></thead>
+    <tbody>
+      <tr><td>Advertising ID</td><td>Show ads, including personalised ads where allowed</td><td>Google AdMob</td></tr>
+      <tr><td>Device and app information, ad interactions</td><td>Measure ads, prevent fraud</td><td>Google AdMob</td></tr>
+      <tr><td>IP address</td><td>Approximate location for ad delivery</td><td>Google AdMob</td></tr>
+    </tbody>
+  </table>
+  <p>This data goes to Google, not to the developer, and is handled under <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google&rsquo;s Privacy Policy</a> (see also <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">how Google uses data from apps that use its services</a>). The ads SDK never sees your torrents, your downloads or your files. You can reset or delete your advertising ID, or opt out of personalised ads, in <em>Android Settings &rarr; Privacy &rarr; Ads</em>.</p>
   <p>Crash and stability statistics that Android shares with Google Play under your device&rsquo;s own settings (&ldquo;Android vitals&rdquo;) are aggregated and anonymous; they contain nothing about what you download.</p>
 </section>
 
@@ -97,10 +109,11 @@
   <table>
     <thead><tr><th>Permission</th><th>Reason</th><th>When asked</th></tr></thead>
     <tbody>
-      <tr><td><code>INTERNET</code></td><td>Connect to BitTorrent peers, trackers and the DHT network, and download a <code>.torrent</code> file from a link you enter.</td><td>Auto-granted (normal permission)</td></tr>
+      <tr><td><code>INTERNET</code></td><td>Connect to BitTorrent peers, trackers and the DHT network, download a <code>.torrent</code> file from a link you enter, and load ads (from 1 January 2027).</td><td>Auto-granted (normal permission)</td></tr>
       <tr><td><code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code></td><td>Know whether you are on Wi-Fi or a metered network, for the &ldquo;Wi-Fi only&rdquo; setting.</td><td>Auto-granted (normal permissions)</td></tr>
       <tr><td><code>CHANGE_WIFI_MULTICAST_STATE</code></td><td>Find peers on your local network and ask your router to open a port (UPnP / NAT-PMP) so other peers can reach you.</td><td>Auto-granted (normal permission)</td></tr>
       <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Keep transfers you started running while the app is in the background, with a notification showing their progress.</td><td>Auto-granted (normal permissions)</td></tr>
+      <tr><td><code>AD_ID</code></td><td>Added by the Google Mobile Ads SDK so AdMob can read the advertising ID once ads are on (section 2).</td><td>Auto-granted (normal permission)</td></tr>
       <tr><td><code>POST_NOTIFICATIONS</code></td><td>Show transfer progress and tell you when a download has finished.</td><td>On first launch (Android 13+). Optional.</td></tr>
     </tbody>
   </table>
@@ -117,13 +130,13 @@
   </ul>
   <p>Trackers and peers are operated by third parties the developer has no relationship with. Anyone in a torrent&rsquo;s swarm can see the IP addresses taking part in it. If you want to hide your IP address, use a VPN of your choice.</p>
   <p>When you paste a link to a <code>.torrent</code> file, the app downloads that file from the website you entered. The app also asks your router on the local network to open a port (UPnP / NAT-PMP).</p>
-  <p>The app contains no analytics, crash-reporting, attribution, social or cloud-storage SDK. When you share a magnet link or open a downloaded file, the app hands it to the app you choose; the developer does not see it.</p>
+  <p>Apart from Google AdMob (section 2), the app contains no analytics, crash-reporting, attribution, social or cloud-storage SDK. When you share a magnet link or open a downloaded file, the app hands it to the app you choose; the developer does not see it.</p>
   <p>You are responsible for what you download and share. Only download content you have the right to share, such as Linux distributions or Creative Commons media.</p>
 </section>
 
 <section class="card">
   <h2>6. Children&rsquo;s privacy</h2>
-  <p>The app is intended for general audiences and is not directed at children under 13. We do not knowingly collect personal information from children, and the developer collects no personal information from anyone.</p>
+  <p>The app is intended for general audiences and is not directed at children under 13. We do not knowingly collect personal information from children, and the developer collects no personal information from anyone. Ads are not directed at children.</p>
 </section>
 
 <section class="card">
