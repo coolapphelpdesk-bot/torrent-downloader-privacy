@@ -56,7 +56,7 @@
 
 <header>
   <h1>Privacy Policy</h1>
-  <p>Nexus Torrent &middot; last updated <time datetime="2026-11-10">November 10, 2026</time></p>
+  <p>Nexus Torrent &middot; last updated <time datetime="2026-11-22">November 22, 2026</time></p>
 </header>
 
 <section class="card">
@@ -64,9 +64,9 @@
   <p>Nexus Torrent (&ldquo;the app&rdquo;) is a BitTorrent client for Android published by <strong>TeamCoolApps</strong>. You add a magnet link or a <code>.torrent</code> file, and the app downloads it from other BitTorrent users and, if you allow it, shares it back.</p>
   <ul>
     <li>There is no account or sign-in, and <strong>we (the developer) never receive any data about you, your torrents or your downloads</strong>. We have no server.</li>
-    <li>Your torrent list, settings and downloaded files stay on your device.</li>
+    <li>Your torrent list, settings and downloaded files stay on your device. If you connect the app to your own torrent server, it talks to that server directly.</li>
     <li>BitTorrent is peer-to-peer: while a torrent is active, <strong>your IP address is visible to the other peers and to the trackers of that torrent</strong>, as it is with every BitTorrent client. See section 5.</li>
-    <li>The app includes <strong>Google AdMob</strong> to show a banner ad. Ads are switched off until 1 January 2027; until then the ads SDK is not started and receives nothing. See section 2.</li>
+    <li>The app includes <strong>Google AdMob</strong> to show a banner ad. Ads are switched off until 1 September 2027; until then the ads SDK is not started and receives nothing. See section 2.</li>
     <li>The app contains no analytics, crash-reporting or attribution SDK.</li>
   </ul>
 </section>
@@ -75,7 +75,7 @@
   <h2>2. Data we collect</h2>
   <p><strong>The developer collects nothing.</strong> The app sends no personal data, usage data, analytics or crash reports to the developer or to any service operated by the developer. The only third-party SDK that can collect data is Google AdMob, described below.</p>
   <p><strong>Advertising (Google AdMob)</strong></p>
-  <p>The app shows one banner ad on its Torrents screen, served by the <strong>Google Mobile Ads SDK (AdMob)</strong>. Ads are switched off until <strong>1 January 2027</strong>: before that date the SDK is never started, requests no ads and collects nothing. From that date, AdMob may collect the following to show and measure ads:</p>
+  <p>The app shows one banner ad on its Torrents screen, served by the <strong>Google Mobile Ads SDK (AdMob)</strong>. Ads are switched off until <strong>1 September 2027</strong>: before that date the SDK is never started, requests no ads and collects nothing. From that date, in the European Economic Area, the UK and other places where consent is required, Google&rsquo;s consent form (User Messaging Platform) asks for your choice before any ad is requested, and <em>Settings &rarr; Ad privacy choices</em> lets you change it later. AdMob may then collect the following to show and measure ads:</p>
   <table>
     <thead><tr><th>Data</th><th>Purpose</th><th>Collected by</th></tr></thead>
     <tbody>
@@ -97,8 +97,14 @@
       <tr><td>Your torrent list: name, info hash, magnet link, save folder, files you chose, paused or running</td><td>App private storage (local database)</td><td><span class="badge">Never</span></td></tr>
       <tr><td>Copies of <code>.torrent</code> files and resume data, so downloads continue where they stopped</td><td>App private storage</td><td><span class="badge">Never</span></td></tr>
       <tr><td>BitTorrent network state (DHT routing table), so peers are found faster after a restart</td><td>App private storage</td><td><span class="badge">Never</span></td></tr>
-      <tr><td>Preferences: theme, language, Wi-Fi only, keep sharing when done, speed limits</td><td>App private storage</td><td>Only through Android backup, if you have it turned on</td></tr>
-      <tr><td>Downloaded files</td><td>The app&rsquo;s download folder on your device (<code>Android/data/coolapp.torrent.downloader/files/Download</code>)</td><td>Shared with other peers of that torrent while it is seeding (see section 5)</td></tr>
+      <tr><td>Categories and tags you give your torrents</td><td>App private storage (local database)</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>Remote servers you add: name, address, port, user name, and the certificate fingerprint the app trusted on first connection</td><td>App private storage (local database)</td><td>Only to that server, when the app connects to it</td></tr>
+      <tr><td>Passwords for your remote servers and your proxy</td><td>App private storage, encrypted with a key held in the Android Keystore</td><td>Only to that server or proxy. Never backed up</td></tr>
+      <tr><td>RSS feeds you add, their download rules, and which feed items were already handled</td><td>App private storage (local database)</td><td>Never (the feed address is contacted to read the feed, see section 5)</td></tr>
+      <tr><td>An IP filter list you import</td><td>App private storage</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>Transfer statistics (totals downloaded and uploaded)</td><td>App private storage</td><td><span class="badge">Never</span></td></tr>
+      <tr><td>Preferences: theme, language, Wi-Fi only, keep sharing when done, speed limits and schedule, network and proxy settings (without the password), app lock on or off</td><td>App private storage</td><td>Only through Android backup, if you have it turned on</td></tr>
+      <tr><td>Downloaded files and torrents you create</td><td>The app&rsquo;s download folder on your device (<code>Android/data/coolapp.torrent.downloader/files/Download</code>), or <code>Download/Nexus Torrent</code> if you choose it in Settings, or a folder you pick with <em>Save a copy to&hellip;</em></td><td>Shared with other peers of that torrent while it is seeding (see section 5)</td></tr>
     </tbody>
   </table>
   <p>Android cloud backup, when enabled on your device, can include the preferences above. Your torrent list, resume data and downloaded files are excluded from backup.</p>
@@ -109,15 +115,18 @@
   <table>
     <thead><tr><th>Permission</th><th>Reason</th><th>When asked</th></tr></thead>
     <tbody>
-      <tr><td><code>INTERNET</code></td><td>Connect to BitTorrent peers, trackers and the DHT network, download a <code>.torrent</code> file from a link you enter, and load ads (from 1 January 2027).</td><td>Auto-granted (normal permission)</td></tr>
+      <tr><td><code>INTERNET</code></td><td>Connect to BitTorrent peers, trackers and the DHT network, download a <code>.torrent</code> file from a link you enter, and talk to the remote servers, RSS feeds and proxy you set up, and load ads (from 1 September 2027).</td><td>Auto-granted (normal permission)</td></tr>
       <tr><td><code>ACCESS_NETWORK_STATE</code>, <code>ACCESS_WIFI_STATE</code></td><td>Know whether you are on Wi-Fi or a metered network, for the &ldquo;Wi-Fi only&rdquo; setting.</td><td>Auto-granted (normal permissions)</td></tr>
       <tr><td><code>CHANGE_WIFI_MULTICAST_STATE</code></td><td>Find peers on your local network and ask your router to open a port (UPnP / NAT-PMP) so other peers can reach you.</td><td>Auto-granted (normal permission)</td></tr>
       <tr><td><code>FOREGROUND_SERVICE</code>, <code>FOREGROUND_SERVICE_SPECIAL_USE</code></td><td>Keep transfers you started running while the app is in the background, with a notification showing their progress.</td><td>Auto-granted (normal permissions)</td></tr>
       <tr><td><code>AD_ID</code></td><td>Added by the Google Mobile Ads SDK so AdMob can read the advertising ID once ads are on (section 2).</td><td>Auto-granted (normal permission)</td></tr>
-      <tr><td><code>POST_NOTIFICATIONS</code></td><td>Show transfer progress and tell you when a download has finished.</td><td>On first launch (Android 13+). Optional.</td></tr>
+      <tr><td><code>POST_NOTIFICATIONS</code></td><td>Show transfer progress and tell you when a download has finished, on this device or on one of your servers.</td><td>On first launch (Android 13+). Optional.</td></tr>
+      <tr><td><code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code></td><td>Optional app lock: ask for your fingerprint, face or screen lock when the app opens. Android checks it; the app never receives your fingerprint or face data.</td><td>Auto-granted (normal permissions). Off until you turn on <em>App lock</em>.</td></tr>
+      <tr><td><code>WAKE_LOCK</code></td><td>Keep the device awake briefly while background work (feed checks, server notifications) runs.</td><td>Auto-granted (normal permission)</td></tr>
+      <tr><td><code>WRITE_EXTERNAL_STORAGE</code> (Android 9 and 10 only)</td><td>Save downloads in the public <code>Download/Nexus Torrent</code> folder, only if you choose that folder. Android 11 and later need no permission for it.</td><td>When you choose that folder</td></tr>
     </tbody>
   </table>
-  <p>The app requests no access to your contacts, location, camera, microphone, photos or other files. A <code>.torrent</code> file you open is read through Android&rsquo;s file picker or the app you opened it from, which grants access to that file only.</p>
+  <p>The app requests no access to your contacts, location, camera, microphone or photos. A <code>.torrent</code> file, an IP filter list or the files you turn into a new torrent are read through Android&rsquo;s file picker or the app you opened them from, which grants access to those files only.</p>
 </section>
 
 <section class="card">
@@ -130,6 +139,13 @@
   </ul>
   <p>Trackers and peers are operated by third parties the developer has no relationship with. Anyone in a torrent&rsquo;s swarm can see the IP addresses taking part in it. If you want to hide your IP address, use a VPN of your choice.</p>
   <p>When you paste a link to a <code>.torrent</code> file, the app downloads that file from the website you entered. The app also asks your router on the local network to open a port (UPnP / NAT-PMP).</p>
+  <p>Other connections happen only when you set them up:</p>
+  <ul>
+    <li><strong>Remote servers.</strong> If you add your own qBittorrent, Transmission, Deluge or rTorrent server, the app connects directly to the address you entered, signs in with the user name and password you gave, and sends it the commands you choose (add, pause, remove a torrent&hellip;). It checks the server every 15 minutes in the background to tell you when a download there has finished, unless you turn that off. Nothing passes through the developer.</li>
+    <li><strong>RSS feeds.</strong> The app reads the feeds you add from their websites, in the background at the interval you choose, and adds the items your rules match. Those websites see your IP address and the app&rsquo;s name (&ldquo;NexusTorrent&rdquo;).</li>
+    <li><strong>Proxy and VPN.</strong> If you set a SOCKS5 or HTTP proxy, tracker traffic (and peer traffic, unless you turn that off) goes through it and the proxy operator can see it. With <em>Only over VPN</em> on, transfers pause whenever no VPN is connected and use only the VPN&rsquo;s network.</li>
+    <li><strong>Playing while downloading.</strong> The app serves the file to the video player you pick through a small web server that only apps on your own device can reach (address <code>127.0.0.1</code>). It is not reachable from the network.</li>
+  </ul>
   <p>Apart from Google AdMob (section 2), the app contains no analytics, crash-reporting, attribution, social or cloud-storage SDK. When you share a magnet link or open a downloaded file, the app hands it to the app you choose; the developer does not see it.</p>
   <p>You are responsible for what you download and share. Only download content you have the right to share, such as Linux distributions or Creative Commons media.</p>
 </section>
